@@ -1,0 +1,77 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>بوابة عرض المساعد المخصص</title>
+<style>
+/* One entry page for the committee: two cards, one per prototype. Plain layout, navy ink on paper. */
+:root {
+  --bg: #FBFBF8; --fg: #1B2430; --muted: #4A5568; --card: #FFFFFF; --line: #E3E6E4;
+  --ink: #14213D; --teal: #0F766E; --amber: #9A5B0B;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101827; --fg: #F1F4F8; --muted: #AEB8C6; --card: #18243A; --line: #2A3A55;
+    --ink: #E8EEF7; --teal: #5FC4B8; --amber: #F2B45C;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101827; --fg: #F1F4F8; --muted: #AEB8C6; --card: #18243A; --line: #2A3A55;
+  --ink: #E8EEF7; --teal: #5FC4B8; --amber: #F2B45C;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: "Tajawal", "Segoe UI", Tahoma, Arial, sans-serif; font-size: 16px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 32px; direction: rtl;
+}
+main { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+h1 { font-size: 32px; margin: 0; font-weight: 800; text-wrap: balance; }
+.lead { color: var(--muted); margin: 0; }
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 640px) { .cards { grid-template-columns: minmax(0, 1fr); } }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px;
+  display: flex; flex-direction: column; gap: 12px; min-width: 0;
+}
+.card h2 { font-size: 22px; margin: 0; font-weight: 800; }
+.card p { margin: 0; color: var(--muted); }
+.who { font-size: 13px; font-weight: 700; color: var(--teal); }
+.who.hr { color: var(--amber); }
+a.open {
+  margin-top: auto; align-self: flex-start; font-weight: 700; padding: 12px 18px; border-radius: 12px;
+  background: var(--ink); color: var(--bg); text-decoration: none;
+}
+a.open:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.note { font-size: 14px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin: 0; }
+</style>
+
+<main>
+  <header>
+    <h1>المساعد المخصص للموارد البشرية</h1>
+    <p class="lead">نموذجان أوليان للعرض: الأول للموظف، والثاني لموظف الموارد البشرية الذي يراجع الردود ويعتمدها.</p>
+  </header>
+
+  <section class="cards" aria-label="النموذجان">
+    <article class="card">
+      <span class="who">الموظف</span>
+      <h2>مساعد الموظف</h2>
+      <p>يسأل الموظف عن الإجازات والسفر والعهد وساعات العمل والراتب العام، فيجيب من السياسات المعتمدة مع ذكر البند. الاستثناءات والشكاوى والقضايا تُحال إلى الموارد البشرية.</p>
+      <a class="open" href="https://claude.ai/artifact/12s5Ucy2SNK4E52gPaGABf" target="_blank" rel="noopener">فتح النموذج</a>
+    </article>
+
+    <article class="card">
+      <span class="who hr">الموارد البشرية</span>
+      <h2>مساعد الموارد البشرية</h2>
+      <p>يعرض المسودة والبند المصدر، ولا يُرسل شيء قبل أن يعتمده المراجع. كما يعرض حالات التصعيد وسجل القرارات.</p>
+      <a class="open" href="https://claude.ai/artifact/5ySdjK6ZGEKK9WmCCw2Nyv" target="_blank" rel="noopener">فتح النموذج</a>
+    </article>
+  </section>
+
+  <p class="note">النموذجان للعرض فقط، والبيانات فيهما أمثلة. يفتح كل منهما في صفحة مستقلة.</p>
+</main>
+
+</body></html>
